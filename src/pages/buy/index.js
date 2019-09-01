@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import BuyGoodsItem from '@/components/BuyGoodsItem'
 import BestInput from '@/components/BestInput'
+import NavBar from '@/components/NavBar'
+import line from '@/assets/img/line.png'
 import Fetch from '@/utils/baseSever'
 import {hashHistory} from 'react-router'
 import toast from '@/utils/toast'
@@ -56,6 +58,8 @@ class Index extends Component {
     const {data,gender}=this.state
     return (
       <div className={styles.buy}>
+          <NavBar onLeft={()=>{hashHistory.goBack()}}>商家名称-安踏</NavBar>
+          <img className={styles.line} src={line} alt=""/>
         {data.map((item,index)=>{
           return(
             <BuyGoodsItem goods={item} key={index}/>

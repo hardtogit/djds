@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import classNames from 'classnames'
+import {hashHistory} from 'react-router'
+import NavBar from '@/components/NavBar'
 import zfb from '../../assets/img/zfb.png'
 import wx from '../../assets/img/wx.png'
 import styles from './index.module.scss'
@@ -20,6 +22,7 @@ class Index extends Component {
     const {payType}=this.state
     return (
       <div className={styles.pay}>
+          <NavBar onLeft={()=>{hashHistory.goBack()}}>确认支付</NavBar>
         <div className={classNames([styles.item,styles.first])}>
           <div className={styles.left}>
             <img src={zfb} alt=""/>支付宝

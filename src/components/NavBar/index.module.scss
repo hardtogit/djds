@@ -1,0 +1,52 @@
+.root {
+  height: 44px;
+  width:  100%;
+  display: flex;
+  background: #fff;
+  color: #fff;
+  position: fixed;
+  top :0;
+  left :0;
+  z-index:1000
+}
+
+.left,
+.middle,
+.right {
+  display: flex;
+  flex: 12;
+  align-items: center;
+  justify-content: center;
+  color :#fff
+}
+
+.middle {
+  flex: 35;
+  font-size: 18px;
+  text-align :center
+}
+
+.left {
+  justify-content: flex-start;
+  img {
+    margin-left :15px
+  }
+}
+.arrows{
+  position: relative
+}
+
+.backBefore,.backAfter{
+  border: 10px solid transparent;
+  border-right: 10px solid #fff;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  content: ' ';
+}
+.backBefore {
+   border-right-color: #333;
+   left: 2px;
+ }

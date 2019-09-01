@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import {hashHistory} from 'react-router'
+import NavBar from '@/components/NavBar'
 import GoodsItem from '@/components/GoodsItem'
 import Fetch from '@/utils/baseSever'
 import styles from './index.module.scss'
@@ -82,6 +83,7 @@ class Index extends Component {
     } },0)
     return (
       <div className={styles.home}>
+          <NavBar onLeft={()=>{window.history.go(-1)}}>商家名称-安踏</NavBar>
         {data.map((item,index)=>{
           return (<GoodsItem
             handleCheck={()=>{this.handleCheck(index,item)}}
