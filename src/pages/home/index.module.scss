@@ -1,3 +1,67 @@
-.test{
-  font-size: 24px;
+.home{
+  padding-top: 15px;
+  padding-bottom: 60px;
+  .bottomBar{
+    height: 49px;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    box-shadow:0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    .left{
+      flex: 2;
+      .all{
+        font-size:14px;
+        height: 20px;
+        float: left;
+        margin-right: 20px;
+        .checked{
+          display: inline-block;
+          vertical-align: bottom;
+          width: 20px;
+          height: 20px;
+          background-image: url("../../assets/img/noChecked.png");
+          background-size: 100% 100%;
+          margin-right: 10px;
+          &.active{
+            background-image: url("../../assets/img/checked.png");
+            background-size: 100% 100%;
+          }
+        }
+      }
+      .price{
+        float: left;
+        display: flex;
+        .text{
+          font-size: 12px;
+          line-height: 20px;
+          color: #888;
+        }
+        .num{
+          font-size: 15px;
+          color: #E2231A;
+        }
+      }
+
+    }
+    .right{
+      flex: 1;
+      .btn{
+        width: 95px;
+        height: 32px;
+        line-height: 32px;
+        color: #fff;
+        background-color: #E2231A;
+        text-align: center;
+        font-size: 13px;
+        float: right;
+        border-radius: 16px;
+      }
+    }
+
+  }
 }

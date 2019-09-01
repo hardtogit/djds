@@ -1,0 +1,52 @@
+.container {
+  background-color:  #fff;
+  height: 44px;
+  padding: 0 15px;
+  border: none;
+  margin-bottom: 10px;
+  .wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+  .leftText {
+    font-size:  15px;
+    display:block;
+    color: #000;
+    img{
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .right {
+    flex: 1;
+    padding-left:  7px;
+    input{
+      width: 100%;
+      text-align: right;
+      display: block;
+      font-size: 14px;
+    }
+  }
+  &.two {
+    border-bottom-width: 0;
+
+    .wrap {
+    border-bottom: 1px solid  #ededed
+  }
+  }
+
+  &.three {
+    border-top-width: 0
+  }
+
+  &.four {
+    border-top-width: 0;
+    border-bottom-width: 0;
+
+    .wrap {
+    border-bottom: 1px solid  #ededed
+  }
+  }
+}
