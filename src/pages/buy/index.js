@@ -31,7 +31,7 @@ class Index extends Component {
       address:this.address.value,
       comment:this.comment.value,
       gender:this.state.gender,
-      seller:'安踏',
+      seller:this.props.location.query.name,
       datas:JSON.parse(sessionStorage.getItem('buyGoods')).map((item)=>{
         return {...item,goodsid:item['_id'],number:item.num}
       }),
@@ -58,7 +58,7 @@ class Index extends Component {
     const {data,gender}=this.state
     return (
       <div className={styles.buy}>
-          <NavBar onLeft={()=>{hashHistory.goBack()}}>商家名称-安踏</NavBar>
+          <NavBar onLeft={()=>{hashHistory.goBack()}}>商家名称-{this.props.location.query.name}</NavBar>
           <img className={styles.line} src={line} alt=""/>
         {data.map((item,index)=>{
           return(

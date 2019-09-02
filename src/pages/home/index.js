@@ -16,10 +16,11 @@ class Index extends Component {
     }
   }
   componentDidMount(){
+    console.log(this.props)
     Fetch({
       obj:'user',
       act:'goodslist',
-      seller:'安踏'
+      seller:this.props.location.query.name
     }).then((data)=>{
       this.setState({
         data:data.info.map((item)=>({...item, checked:false, num:1}))
@@ -71,7 +72,7 @@ class Index extends Component {
       return
     }
     sessionStorage.setItem('buyGoods',JSON.stringify(this.state.data.filter((item)=>{return(item.checked)})))
-    hashHistory.push('/buy')
+    hashHistory.push('/buy?name='+this.props.location.query.name)
   }
   render() {
     const {data}=this.state
@@ -83,7 +84,7 @@ class Index extends Component {
     } },0)
     return (
       <div className={styles.home}>
-          <NavBar onLeft={()=>{window.history.go(-1)}}>商家名称-安踏</NavBar>
+          <NavBar onLeft={()=>{window.history.go(-1)}}>商家名称-{this.props.location.query.name}</NavBar>
         {data.map((item,index)=>{
           return (<GoodsItem
             handleCheck={()=>{this.handleCheck(index,item)}}
