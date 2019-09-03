@@ -20,7 +20,7 @@ class Index extends Component {
     Fetch({
       obj:'user',
       act:'goodslist',
-      seller:this.props.location.query.name
+      seller:this.props.location.query.name||'爱哆哆'
     }).then((data)=>{
       this.setState({
         data:data.info.map((item)=>({...item, checked:false, num:1}))
