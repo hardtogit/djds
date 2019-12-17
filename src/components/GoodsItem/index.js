@@ -10,6 +10,9 @@ class Index extends Component {
   handleCheck=()=>{
      this.props.handleCheck()
   }
+  handleInput=(e)=>{
+    this.props.handleInput( e.target.value)
+  }
   handleSub=()=>{
     this.props.handleSub()
   }
@@ -36,7 +39,7 @@ class Index extends Component {
              ￥ {price}
               <div className={styles.count}>
                 <div className={styles.sub} onClick={this.handleSub}>-</div>
-                <div className={styles.input}>{num}</div>
+                <input type='number' className={styles.input} onChange={this.handleInput} value={num}/>
                 <div className={styles.add} onClick={this.handleAdd}>+</div>
               </div>
             </div>

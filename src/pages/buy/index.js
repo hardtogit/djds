@@ -14,7 +14,7 @@ class Index extends Component {
     super(props);
     this.state={
       data:JSON.parse(sessionStorage.getItem('buyGoods'))||[],
-      gender:undefined
+      gender:'男'
     }
   }
   handleSubmit=()=>{
@@ -46,6 +46,7 @@ class Index extends Component {
         toast(response.ustr)
         return
       }
+      sessionStorage.setItem('orderInfo',JSON.stringify(response.info))
       hashHistory.push('/pay')
     })
   }

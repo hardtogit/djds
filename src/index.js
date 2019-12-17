@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import VConsole from 'vconsole'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import toast from "@/utils/toast";
+
+// const vConsole = new VConsole();
 window.apiconn.response_received_handler = function(jo){
   // if(!sessionStorage.getItem('credential_data')){
   //   if(window.location.href.indexOf('login')===-1){

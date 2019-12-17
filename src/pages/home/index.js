@@ -16,7 +16,9 @@ class Index extends Component {
     }
   }
   componentDidMount(){
-    console.log(this.props)
+    if(this.props.location.query.name){
+      sessionStorage.setItem('goodsName',this.props.location.query.name)
+    }
     Fetch({
       obj:'user',
       act:'goodslist',
@@ -58,6 +60,18 @@ class Index extends Component {
       })
     }
   }
+  handleInput=(index,goods,number)=>{
+    const {data}=this.state
+    const {num}=goods
+    if(number<0){
+      toast('请输入正确的数字')
+    }else{
+      data[index].num=parseInt(number)||1
+      this.setState({
+        data
+      })
+    }
+  }
   handleCheckAll=()=>{
     const {data}=this.state
     const flag=data.filter((item)=>{return(item.checked)}).length===data.length
@@ -75,6 +89,16 @@ class Index extends Component {
     hashHistory.push('/buy?name='+this.props.location.query.name)
   }
   render() {
+    const ua = navigator.userAgent.toLowerCase();
+    const isWeixin = ua.indexOf('micromessenger') != -1;
+    if (isWeixin) {
+      // alert(JSON.stringify(this.props.location.query))
+      if(this.props.location.query.openid){
+        sessionStorage.setItem('openid',this.props.location.query.openid)
+      }else{
+        window.location.href='http://djds.bgr-china.net/cgi-bin/get.pl?name='+this.props.location.query.name||'爱哆哆'
+      }
+    }
     const {data}=this.state
     const checkedAll=data.filter((item)=>{return(item.checked)}).length===data.length
     const price=data.reduce((total,current)=>{if(current.checked){
@@ -90,6 +114,7 @@ class Index extends Component {
             handleCheck={()=>{this.handleCheck(index,item)}}
             handleAdd={()=>{this.handleAdd(index,item)}}
             handleSub={()=>{this.handleSub(index,item)}}
+            handleInput={(num)=>{this.handleInput(index,item,num)}}
             key={index}
             goods={item}/>)
         })}
@@ -120,5 +145,4 @@ class Index extends Component {
     );
   }
 }
-
 export default Index;
