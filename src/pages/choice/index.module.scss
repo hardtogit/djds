@@ -1,0 +1,127 @@
+.choice{
+  background-image: url("../../assets/img/twoBg.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  min-height: 640px;
+  overflow: hidden;
+  .btn{
+    width: 140px;
+    height: 54px;
+    margin: 40px auto 40px auto;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .item{
+    height: 460px;
+    width: 100vw;
+    background-image: url("../../assets/img/twohBg.png");
+    background-size: 100% 100%;
+    padding: 60px 100px 0 100px;
+    color: #f5df8a;
+    .title{
+      color: #f5df8a;
+      font-size: 16px;
+    }
+    .subTitle{
+      color: #f5df8a;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .content{
+      margin-top: 20px;
+      font-size: 16px;
+      text-indent: 2em;
+      text-align: justify;
+      color: #f5df8a;
+    }
+    .bottom{
+      text-align: right;
+      color: #f5df8a;
+      font-size: 16px;
+      margin-top: 18px;
+    }
+    .subBottom{
+      text-align: right;
+      color: #f5df8a;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  }
+  .labels{
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    .label{
+      width: 60px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      color: #f5df8a;
+      margin: 0 2px;
+      display: inline-block;
+      background-image: url("../../assets/img/labelBg.png");
+      background-size: 100% 100%;
+      &.active{
+        background-image: url("../../assets/img/labelBgH.png");
+        color: #ad1f13;
+      }
+    }
+
+  }
+}
+:global{
+  #swiper-container{
+    position: relative;
+    .swiper-button-next{
+      position: absolute;
+      right:15px;
+      top:48%;
+      z-index: 100;
+      img{
+      display: block;
+      width: 24px;
+    }
+    }
+    .swiper-button-prev{
+      position: absolute;
+      left: 15px;
+      top:48%;
+      z-index: 100;
+      img {
+        display: block;
+        width: 24px;
+      }
+    }
+    .swiper-button-disabled{
+      display: none;
+    }
+  }
+  .swiper-pagination{
+    text-align: center;
+    height: 0;
+    top:-60px;
+    width: 100%;
+    position: relative;
+    vertical-align: baseline;
+    .swiper-pagination-bullet{
+      display: inline-block;
+      vertical-align: top;
+      width:10px;
+      margin: 0 5px;
+      height: 10px;
+      border-radius: 50%;
+      background-color:#f5df8a;
+      &.swiper-pagination-bullet-active{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: relative;
+        top:-1px
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.fill{
+  background-image: url("../../assets/img/twoBg.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  min-height: 640px;
+  position: relative;
+  padding-top: 10px;
+  overflow: hidden;
+  .btn{
+    width: 140px;
+    height: 54px;
+    margin: 40px auto 40px auto;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .inputGroup{
+    width: 280px;
+    margin: 30px auto 0 auto;
+    .label{
+      font-size: 18px;
+      color: #f5df8a;
+      padding-left: 0.2rem;
+    }
+    .input{
+      width: 280px;
+      height: 44px;
+      background-image: url("../../assets/img/inputBg.png");
+      background-size: 100% 100%;
+      margin: 8px auto 0 auto;
+      input{
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: transparent;
+        padding: 0 40px;
+        font-size: 14px;
+        text-align: center;
+        color: #ab0708;
+      }
+    }
+    .content{
+      height: 200px;
+      margin-top: 8px;
+      background-image: url("../../assets/img/contentBg.png");
+      background-size: 100% 100%;
+      display: flex;
+      align-items: center;
+      color: #ab0708;
+      font-size: 16px;
+      text-align: justify;
+      padding: 0 40px;
+      .inner{
+        .bottom{
+          text-align: right;
+        }
+
+      }
+    }
+  }
+
+}
+//@media screen and (max-height: 500px){
+//  .btn{
+//    display: none;
+//  }
+//}

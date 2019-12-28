@@ -22,7 +22,13 @@
 .App-link {
   color: #61dafb;
 }
-
+@font-face {
+  font-family: 'FZKTJW';
+  src: url('./assets/font/FZBWKSJW.woff') format('woff')
+}
+*{
+  font-family: "FZKTJW"!important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

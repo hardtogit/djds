@@ -33,7 +33,7 @@ window.apiconn.response_received_handler = function(jo){
   //   }
   // }
 };
-window.apiconn.wsUri = 'ws://101.132.136.124:51718/djds';
+window.apiconn.wsUri = 'ws://193.112.10.169:51718/hdjs';
 window.apiconn.connect();
 window.apiconn.state_changed_handler = function() {
   if (window.apiconn.conn_state == 'IN_SESSION') {

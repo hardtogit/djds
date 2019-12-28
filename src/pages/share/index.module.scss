@@ -1,0 +1,60 @@
+.share{
+  background-image: url("../../assets/img/fourBg.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  &.formShare{
+    background-image: url("../../assets/img/fourTwoBg.jpg");
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    .inner{
+      flex: 1;
+      .title{
+        color: #f5df8a;
+        font-size: 16px;
+      }
+      .text{
+        margin-top: 20px;
+        font-size: 16px;
+        text-indent: 2em;
+        text-align: justify;
+        color: #f5df8a;
+      }
+      .bottom{
+        text-align: right;
+        color: #f5df8a;
+        font-size: 16px;
+        margin-top: 18px;
+      }
+    }
+  }
+  .btn{
+    width: 1.7rem;
+    height: 0.8rem;
+    position: fixed;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    bottom: 0.4rem;
+  }
+  .bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    background-color: #000;
+    opacity: .7;
+  }
+  .icon{
+    width: 40px;
+    position: fixed;
+    right: 8px;
+    top:10px
+  }
+}
